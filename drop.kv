@@ -1,0 +1,20 @@
+#:kivy 1.4.0
+
+
+<Lista>
+    orientation:"vertical"
+
+    BoxLayout:
+        TextInput:
+            id:_tarefa
+
+        BoxLayout:
+            orientation:"vertical"
+            Button:
+                text:"Cadastrar"
+
+                on_press:root.cadastrar(_tarefa.text)
+
+            Button:
+                text:"Excluir tarefas"
+                on_release:root.excluir_tarefas()
